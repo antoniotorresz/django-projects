@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar empleados por palabra clave</title>
+</head>
+<body>
+<form method="get">
+    {% csrf_token %}
+    <input type="text" id="kword" name="kword" placeholder="Ingrese el nombre aqui">
+    <button type="submit">Buscar</button>
+</form>
+{% for e in empleados %}
+<ul>{{e.first_name}}</ul>
+{% endfor %}
+</body>
+</html>

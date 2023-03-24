@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de todos los empleados</title>
+</head>
+<body>
+<h1>Ejercicios de listview</h1>
+<h2>Lista de todos los empleados</h2>
+{{object_list}}
+<ul>
+    {% for e in object_list %}
+    <li>
+        {{e}}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habilidades de empleado</title>
+</head>
+<body>
+<h1>Listando habilidades de un empleado</h1>
+<form method="get">
+  {% csrf_token %}
+  <input type="text" name="id_empleado" id="id_empleado" placeholder="Ingrese id de empleado">
+  <button type="submit">Ingresar</button>
+</form>
+<ul>
+  {% for h in habilidades %}
+  <li>{{h}}</li>
+  {% endfor %}
+</ul>
+</body>
+</html>
